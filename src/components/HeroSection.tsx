@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Star, BookOpen, Users, Award, Link } from 'lucide-react';
+import { ChevronRight, Star, BookOpen, Users, Award } from 'lucide-react';
+import  {Link}  from 'react-router-dom';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
