@@ -86,14 +86,14 @@ const HeroSection = () => {
               
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/courses"
+                  to="/courses"
                   className="group px-6 py-3 rounded-lg bg-gradient-to-r from-teal-500 to-teal-600 text-white font-medium shadow-lg hover:shadow-teal-500/30 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Explore Courses
                   <ChevronRight size={18} className="inline ml-1 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  href="/register"
+                  to="/register"
                   className="px-6 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white font-medium shadow-lg hover:bg-gray-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300"
                 >
                   Start Free Trial
