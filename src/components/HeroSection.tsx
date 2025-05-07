@@ -250,7 +250,7 @@ const HeroSection = () => {
                       <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center mr-2">
                         <Users size={12} className="text-white" />
                       </div>
-                      <div className="text-sm font-bold text-gray-800">Web Development</div>
+                      <div className="text-sm font-bold text-gray-800">DevOps</div>
                     </div>
                     <div className="flex justify-between text-xs text-gray-500 mb-1">
                       <span>36 lessons</span>
