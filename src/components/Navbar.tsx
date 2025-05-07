@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -31,7 +30,7 @@ const Navbar = () => {
               CourseHub
             </Link>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
@@ -40,48 +39,80 @@ const Navbar = () => {
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                <svg
+                  className="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
                 </svg>
               )}
             </button>
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
               to="/"
-              className="text-gray-700 hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className={`${
+                isScrolled ? "text-black" : "text-gray-100"
+              } hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors`}
             >
               Home
             </Link>
             <Link
               to="/courses"
-              className="text-gray-700 hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className={`${
+                isScrolled ? "text-black" : "text-gray-100"
+              } hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors`}
             >
               Courses
             </Link>
             <Link
               to="/register"
-              className="text-gray-700 hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className={`${
+                isScrolled ? "text-black" : "text-gray-100"
+              } hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors`}
             >
               Register
             </Link>
             <Link
               to="/my-courses"
-              className="text-gray-700 hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className={`${
+                isScrolled ? "text-black" : "text-gray-100"
+              } hover:text-teal-600 hover:underline hover:underline-offset-4 px-3 py-2 rounded-md text-sm font-medium transition-colors`}
             >
               My Courses
             </Link>
           </div>
         </div>
-        
+
         {/* Mobile menu, show/hide based on menu state */}
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-lg rounded-lg mt-2`}>
+        <div
+          className={`${isMenuOpen ? "block" : "hidden"} md:hidden bg-white shadow-lg rounded-lg mt-2`}
+        >
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               to="/"
